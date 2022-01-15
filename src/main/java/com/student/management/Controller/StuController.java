@@ -52,19 +52,19 @@ public class StuController {
         }
     }
 
-    @DeleteMapping("/DeleteStudent/{id}")
+    @DeleteMapping("/removeStudent/{id}")
     public List<Student> deleteStudent(@PathVariable("id") int id) {
 
-         this.studentService.deleteStudent(id);
+         this.studentService.removeStudent(id);
          return this.studentService.getAllStudent();
 
     }
 
-    @PutMapping("/updateStudent/{id}")
-    public List<Student> updateStudent(@RequestBody Student stu, @PathVariable("id") int id) {
+    @PutMapping("/editStudent/{id}")
+    public List<Student> editStudent(@RequestBody Student stu, @PathVariable("id") int id) {
         System.out.println(id);
 
-        return this.studentService.updateStudent(stu, id);
+        return this.studentService.editStudent(stu, id);
 
     }
 }

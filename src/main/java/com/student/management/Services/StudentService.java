@@ -44,7 +44,7 @@ public class StudentService {
     }
 
     // Delete student
-    public List<Student> deleteStudent(int id) {
+    public List<Student> removeStudent(int id) {
         List<Student> student = null;
 
         try {
@@ -61,7 +61,7 @@ public class StudentService {
 
     }
 
-    public List<Student> updateStudent(Student stu, int id) {
+    public List<Student> editStudent(Student stu, int id) {
         List<Student> student = null;
 
         try {
